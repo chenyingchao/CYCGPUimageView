@@ -1,0 +1,6 @@
+framework module Pods_CYCGPUimageView {
+  umbrella header "Pods-CYCGPUimageView-umbrella.h"
+
+  export *
+  module * { export * }
+}

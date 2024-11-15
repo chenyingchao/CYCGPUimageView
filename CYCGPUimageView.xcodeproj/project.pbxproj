@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86B72F699583EF62B2CCB6E9 /* Pods_CYCGPUimageView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77D03FF2840EBD1069B5023 /* Pods_CYCGPUimageView.framework */; };
 		FAE9EAC22CE7163600C2EFDB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE9EAC12CE7163600C2EFDB /* AppDelegate.m */; };
 		FAE9EAC52CE7163600C2EFDB /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE9EAC42CE7163600C2EFDB /* SceneDelegate.m */; };
 		FAE9EAC82CE7163600C2EFDB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE9EAC72CE7163600C2EFDB /* ViewController.m */; };
@@ -17,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4924204D5CDB93A86D4537B0 /* Pods-CYCGPUimageView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CYCGPUimageView.debug.xcconfig"; path = "Target Support Files/Pods-CYCGPUimageView/Pods-CYCGPUimageView.debug.xcconfig"; sourceTree = "<group>"; };
+		AA990B55EFB78D96693BB321 /* Pods-CYCGPUimageView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CYCGPUimageView.release.xcconfig"; path = "Target Support Files/Pods-CYCGPUimageView/Pods-CYCGPUimageView.release.xcconfig"; sourceTree = "<group>"; };
+		B77D03FF2840EBD1069B5023 /* Pods_CYCGPUimageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CYCGPUimageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE9EABD2CE7163600C2EFDB /* CYCGPUimageView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CYCGPUimageView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE9EAC02CE7163600C2EFDB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FAE9EAC12CE7163600C2EFDB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -36,17 +40,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86B72F699583EF62B2CCB6E9 /* Pods_CYCGPUimageView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21498C0DBA8AD529FA62D6DD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4924204D5CDB93A86D4537B0 /* Pods-CYCGPUimageView.debug.xcconfig */,
+				AA990B55EFB78D96693BB321 /* Pods-CYCGPUimageView.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3F643489CC800784DDAAC14B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B77D03FF2840EBD1069B5023 /* Pods_CYCGPUimageView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FAE9EAB42CE7163600C2EFDB = {
 			isa = PBXGroup;
 			children = (
 				FAE9EABF2CE7163600C2EFDB /* CYCGPUimageView */,
 				FAE9EABE2CE7163600C2EFDB /* Products */,
+				21498C0DBA8AD529FA62D6DD /* Pods */,
+				3F643489CC800784DDAAC14B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +108,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAE9EAD62CE7163800C2EFDB /* Build configuration list for PBXNativeTarget "CYCGPUimageView" */;
 			buildPhases = (
+				7239863F9C6938E935D4CD32 /* [CP] Check Pods Manifest.lock */,
 				FAE9EAB92CE7163600C2EFDB /* Sources */,
 				FAE9EABA2CE7163600C2EFDB /* Frameworks */,
 				FAE9EABB2CE7163600C2EFDB /* Resources */,
@@ -140,6 +166,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7239863F9C6938E935D4CD32 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CYCGPUimageView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FAE9EAB92CE7163600C2EFDB /* Sources */ = {
@@ -293,6 +344,7 @@
 		};
 		FAE9EAD72CE7163800C2EFDB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4924204D5CDB93A86D4537B0 /* Pods-CYCGPUimageView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -319,6 +371,7 @@
 		};
 		FAE9EAD82CE7163800C2EFDB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA990B55EFB78D96693BB321 /* Pods-CYCGPUimageView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
